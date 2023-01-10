@@ -1,0 +1,11 @@
+body {
+    width: 1200px;
+    margin: 16px auto;
+}
+
+.app {
+    width: 600px;
+    height: 350px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
