@@ -1,5 +1,5 @@
 git pull
 git add . # git clean -f
 git status
-git commit -m 'Sixteenth commit'
+git commit -m '17 commit'
 git push

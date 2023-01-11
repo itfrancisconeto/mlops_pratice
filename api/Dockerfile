@@ -1,10 +1,13 @@
 FROM ubuntu
 
-COPY ./api/requirements.txt requirements.txt
-RUN pip install --no-dependencies -r requirements.txt
+RUN apt update
+RUN apt install python3-pip -y
+RUN pip3 install pickle4
+RUN pip3 install flask
+RUN pip3 install numpy
 
 WORKDIR /app
 
 COPY . .
 
-CMD [ "python","-m","flask","run","--host=0.0.0.0" ]
+CMD [ "python3","-m","flask","run","--host=0.0.0.0" ]
