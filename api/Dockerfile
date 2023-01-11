@@ -9,4 +9,4 @@ RUN pip install --no-dependencies -r requirements.txt
 
 COPY . .
 
-CMD [ "python", "-m" , "flask", "run", "--host=0.0.0.0"]
+CMD [ "python", "app.py" ]
