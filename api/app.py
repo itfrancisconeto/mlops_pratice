@@ -8,7 +8,7 @@ app = Flask(__name__)
 # Prediction function
 def ValuePredictor(to_predict_list):
     to_predict = np.array(to_predict_list).reshape(1, -1)
-    model_predictor = pickle.load(open('../ml/predictor.pkl', 'rb'))
+    model_predictor = pickle.load(open('predictor.pkl', 'rb'))
     result = model_predictor.predict(to_predict)
     return result[0]
 

@@ -1,0 +1,18 @@
+> error:
+Got permission denied while trying to connect to the Docker daemon socket at unix
+> solution:
+sudo groupadd docker
+sudo usermod -aG docker $USER
+newgrp docker
+
+> docker restart services:
+sudo systemctl restart docker.socket
+sudo systemctl restart docker
+
+> docker management:
+docker pull itfrancisconeto/mlops_pratice:latest
+docker run <image_id>
+docker rmi -f <image_id>
+docker ps -a
+docker stop $(docker ps -aq)
+docker rm $(docker ps -aq)
