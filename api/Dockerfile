@@ -5,7 +5,7 @@ FROM python:3.8-slim-buster
 WORKDIR /app
 
 COPY ./api/requirements.txt requirements.txt
-RUN pip3 install -r requirements.txt
+RUN pip3 install --no-dependencies -r requirements.txt
 
 COPY . .
 
