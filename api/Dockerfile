@@ -1,12 +1,12 @@
 # syntax=docker/dockerfile:1
 
-FROM python:3.8-slim-buster
+FROM python:latest
 
 WORKDIR /app
 
 COPY ./api/requirements.txt requirements.txt
-RUN pip3 install --no-dependencies -r requirements.txt
+RUN pip install --no-dependencies -r requirements.txt
 
 COPY . .
 
-CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0"]
+CMD [ "python", "-m" , "flask", "run", "--host=0.0.0.0"]
