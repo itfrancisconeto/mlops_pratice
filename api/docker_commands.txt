@@ -18,3 +18,4 @@ docker rmi -f <image_id>
 docker ps -a
 docker stop $(docker ps -aq)
 docker rm $(docker ps -aq)
+docker run --rm -it <image_id> /bin/bash # to acess terminal image
