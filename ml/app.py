@@ -76,7 +76,7 @@ class MachineLearningModel(object):
     def publish_model(self,model_fit)->any:
         print()
         print('8) Publishing fited model')
-        pickle.dump(model_fit, open('predictor.pkl', 'wb'))
+        pickle.dump(model_fit, open('../api/predictor.pkl', 'wb'))
 
     '''
     Main function

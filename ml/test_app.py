@@ -37,4 +37,4 @@ def test_train_test_definition_must_contain_30_percent_rows(create_ml_object)->a
     assert (model_fit is None) == False
 
 def test_fit_model_file_exists(create_ml_object)->any:
-    assert path.exists("../ml/predictor.pkl") == True
+    assert path.exists("../api/predictor.pkl") == True
