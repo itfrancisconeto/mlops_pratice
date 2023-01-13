@@ -6,4 +6,4 @@ ENV FLASK_RUN_HOST=0.0.0.0
 RUN pip install pickle4 && pip install flask && pip install numpy
 EXPOSE 3000
 COPY . .
-CMD ["flask", "run"]
+CMD ["python", "app.py"]
