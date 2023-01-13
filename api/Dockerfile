@@ -1,13 +1,6 @@
-FROM ubuntu
-
-RUN apt update
-RUN apt install python3-pip -y
-RUN pip3 install pickle4
-RUN pip3 install flask
-RUN pip3 install numpy
-
+FROM python:latest
 WORKDIR /app
-
-COPY . .
-
-CMD [ "python3","-m","flask","run","--host=0.0.0.0" ]
+RUN pip install pickle4 && pip install flask && pip install numpy
+COPY . /app
+EXPOSE 3000
+CMD python app.py

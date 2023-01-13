@@ -10,7 +10,9 @@ sudo systemctl restart docker.socket
 sudo systemctl restart docker
 
 > docker management:
+docker build -t <image_name> .
 docker pull itfrancisconeto/mlops_pratice:latest
+docker images
 docker run <image_id>
 docker rmi -f <image_id>
 docker ps -a
