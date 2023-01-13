@@ -1,5 +1,6 @@
 FROM python:latest
 RUN pip install pickle4 && pip install flask && pip install numpy
-COPY . .
+WORKDIR /app
+COPY . /app/
 EXPOSE 3000
-CMD python app.py
+CMD ["python", "/app/app.py"]
